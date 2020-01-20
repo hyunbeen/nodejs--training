@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+<script type="text/javascript">
+window.onload = function(){
+	var socket = io.connect();//소켓 객체를 얻어옴
+	
+	var button = document.getElementById('button');
+	button.onclick = function(){
+		var txt = document.getElementById('text').value;
+		socket.emit('toServer',txt);
+	}
+	socket.on('toClient',function(data){
+		var result = document.getElementById('result');
+		result.innerHTML += data + "<br/>"
+	});
+}
+</script>
+</head>
+<body> 
+<input type='text' id='text'/>
+<input type='button' id='button' value='전송'/>
+<div id='result'/>
+</body>
+</html>

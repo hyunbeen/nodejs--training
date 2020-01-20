@@ -1,0 +1,12 @@
+/**
+ * http://usejsdoc.org/
+ */
+
+var http = require('http');
+
+var server = http.createServer();
+
+server.listen(9001,function(){
+	console.log('9001 서버가 시작되었습니다');
+});
+

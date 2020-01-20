@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;KanbanTest/controller/noname.js&apos; to &apos;index.js&apos;" description="Rename resource &apos;noname.js&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="controller/noname.js" name="index.js" stamp="1509584397066" updateReferences="true"/>
+</session>

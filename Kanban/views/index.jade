@@ -1,0 +1,45 @@
+extends layout
+
+block content
+	div.container
+		div.jumbotron
+			h1 나의 메모
+			p 당신의 일정을 꼼꼼이 관리해줍니다.
+			<!-- a.btn.btn-primary.btn-lg 작업 입력 -->
+			div.form-group
+				form(action='/createTask',method='post')
+					input(type='text' name='contents' class='form-control')
+					button(type='submit' class='btn btn-success' style='margin-top:2%') 작업추가
+		table.table
+			tr
+				td
+					h2 할일
+					ul.list-group
+						each val in todoTasks
+							<!-- li.list-group-item= val -->
+							div.input-group
+								li.list-group-item=val
+								div.input-group-btn
+									form(action='/updateTask' method='post')
+										input(type='hidden' name='status' value='PROGRESS')
+										button(type='submit' class='btn btn-info' name='contents' value=val) <strong> > </strong>
+				td
+					h2 진행중인 일
+					ul.list-group
+						each val in progressTasks
+							div.input-group
+								li.list-group-item= val
+								div.input-group-btn
+									form(action='/updateTask' method='post')
+										input(type='hidden' name='status' value='DONE')
+										button(type='submit' class='btn btn-info' name='contents' value=val) <strong> > </strong>
+				td
+					h2 끝난일
+					ul.list-group
+						each val in doneTasks
+							div.input-group
+								li.list-group-item= val
+								div.input-group-btn
+									form(action='/deleteTask' method='post')
+										input(type='hidden' name='status' value='DELETE')
+										button(type='submit' class='btn btn-info' name='contents' value=val) <strong> X </strong>

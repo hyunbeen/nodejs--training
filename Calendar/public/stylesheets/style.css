@@ -1,0 +1,69 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+/* */
+.cel , .cel_dummy {
+	border : 1px solid #999999;
+	float : left;
+	width : 100px;
+	height : 100px;
+}
+
+.cel li {
+	font-size : 12px;
+}
+
+.yoil {
+	height : 40px;
+}
+
+.blue {
+	color : blue;
+}
+
+.red {
+	color : red;
+}
+
+.bold {
+	font-weight : bold;
+}
+
+.box_c<Enter> {						/* webkit 기반 브라우저에서 중앙정렬*/
+	display : -webkit-box;
+	-webkit-box-orient : horizontal ;
+	-webwit-box-pack : c<Enter>;
+	-webwit-box-align : c<Enter>;
+}
+
+#calMain{
+	margin-left : 50px;
+	margin-top : 50px;
+	width : 714px;
+}
+
+.prevMonth{
+	margin-left : 50px;
+	float : left;
+	width : 200px;
+	height : 70px;
+}
+
+.currentMonth {
+	float : left;
+	width : 314px;
+	height : 70px;
+	font-size : 30px;
+}
+
+.nextMonth {
+	float : left;
+	width : 200px;
+	height : 70px;
+}
